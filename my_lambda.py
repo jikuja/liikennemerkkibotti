@@ -52,7 +52,7 @@ def get_sign_description(txt, mapping):
     # first handle speed limits
     m = re.match("(361|362|363|364)_(\d+)", txt)
     if m:
-        return mapping.get(m.group(1)) + "arvolla" + m.group(2)
+        return mapping.get(m.group(1)) + " arvolla " + m.group(2)
     if txt == "Unclassified":   # sign not automatically identified by cyclorama
         return "tunnistamaton"
     return mapping.get(txt, "bork!")
